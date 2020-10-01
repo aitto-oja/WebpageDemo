@@ -1,0 +1,10 @@
+
+/* **************** CARD GAME STYLES */
+
+#startCardGameBtn {
+    background-color: green;
+}
+
+#showGuessing {
+    display: none;
+}

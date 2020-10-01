@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aitto-oja::home</title>
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Dropdown styles -->
+    <link rel="stylesheet" href="dropdown.css" />
+
+    <!-- Dark/Light theme css stylesheet -->
+    <link rel="stylesheet" href="dark_light_theme.css" />
+
+    <!-- Page style sheet -->
+    <link rel="stylesheet" href="mystyle.css" />
+
+</head>
+
+<body>
+    <input type="checkbox" class="theme-switch" id="theme-switch" />
+    <div id="page">
+        <div id="content">
+            <header>
+                <label for="theme-switch" class="switch-label"></label>
+            </header>
+            <main>
+
+                <aside>
+                    <div class="dropdown" style="float:left;">
+                        <button onmouseover="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+                        <div class="dropdown-content" style="left:0;">
+                            <a href="index.html"><i class="fa fa-home"> Home</i></a>
+                            <a href="projects.html"><i class="fa fa-file-code-o"> Projects </i></a>
+                            <a href="contact.html"><i class="fa fa-envelope-o"> Contact </i></a>
+                        </div>
+                    </div>
+
+                </aside>
+                <h1>Please contact </h1>
+
+
+
+
+                <img style="float:right" src="Images/reeta.jpg" width="30%" hspace="20">
+
+
+                <p>
+
+                    <q>In 900 years of time and space, I’ve never met anyone who wasn’t important. </q>
+                    [Doctor Who, A Christmas Carol]
+
+
+
+                </p>
+
+                <p>
+                    Please, send me an email or go follow me in LinkdedIn or GitHub.
+                </p>
+
+                <ul>
+                    <li> reeta(dot)m(dot)aittooja(at)gmail(dot)com </li>
+                    <li> ... </li>
+                    <li> <a href="https://www.linkedin.com/in/reeta-aitto-oja/" target="_blank">LinkedIn: reeta-aitto-oja</a> </li>
+                    <li>...</li>
+                    <li> <a href="https://github.com/aitto-oja" target="_blank">GitHub: aitto-oja </a> </li>
+                </ul>
+
+            </main>
+            <footer>
+                <small>
+                    This page was last modified on:
+                    <script> document.write(document.lastModified) </script>
+                </small>
+            </footer>
+        </div>
+    </div>
+
+    <script src="darktheme.js">
+    </script>
+</body>
+
+</html>

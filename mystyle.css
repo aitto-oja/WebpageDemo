@@ -1,0 +1,73 @@
+
+
+html, 
+body {
+    margin: 0;
+    padding: 0; 
+    height: 100%;
+    font-family: monospace, Helvetica, Arial, sans-serif;;
+}
+
+#page {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    text-indent: 0em;
+    text-align: justify;
+    min-height: 100%;
+    transition: color .2s, background-color .2s;
+}
+
+#content {
+    margin: auto;
+    max-width: 80%;
+}
+
+#home_title {
+    font-size: 7em;
+    font-family: fantasy;
+    text-align: center;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+footer {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+li {
+    text-align: center;
+    list-style: none;
+}
+
+p {
+    margin-left: 120px;
+    margin-right: 170px;
+    text-align: justify;
+}
+
+aside {
+    width: 25%;
+    position: fixed;
+}
+
+
+
+/* additional text container */
+
+.addText {
+    position: relative;
+    display: inline-block;
+}
+
+/* additional text (hidden by default) */
+
+#showWebpage {
+    display: none;
+}
+
+#showGuessNumber {
+    display: none;
+}

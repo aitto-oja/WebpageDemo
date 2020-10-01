@@ -1,0 +1,67 @@
+:root {
+  /* Valoisa teema */
+  --light-switch-shadow: #373d4e;
+  --light-switch-icon: "Dark mode?";
+  --light-text: black;
+  --light-bg: antiquewhite;
+  /* Tumma teema */
+  --dark-switch-shadow: #fce477;
+  --dark-switch-icon: "Light mode?";
+  --dark-text: antiquewhite;
+  --dark-bg: black;
+  /* Oletusteema: valoisa */
+  --switch-shadow-color: var(--light-switch-shadow);
+  --switch-icon: var(--light-switch-icon);
+  --text-color: var(--light-text);
+  --bg-color: var(--light-bg);
+}
+
+/* Vaihtoehtoteema: tumma */
+
+.theme-switch:checked~#page {
+  --switch-shadow-color: var(--dark-switch-shadow);
+  --switch-icon: var(--dark-switch-icon);
+  --text-color: var(--dark-text);
+  --bg-color: var(--dark-bg);
+}
+
+/* Teeman vaihtaja */
+
+.theme-switch {
+  /* Piilottaa checkboxin */
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.switch-label {
+  cursor: pointer;
+  display: flex;
+}
+
+.switch-label::before {
+  content: var(--switch-icon);
+  font-size: medium;
+  transition: text-shadow .2s;
+}
+
+.switch-label::after {
+  align-self: center;
+  content: var(--switch-text);
+  color: var(--switch-shadow-color);
+  font-size: medium;
+  line-height: 40px;
+  opacity: 0;
+  padding-left: 15px;
+  transition: opacity .2s;
+}
+
+.theme-switch:focus~#page .switch-label::before, .switch-label:hover::before {
+  text-shadow: 0 0 15px var(--switch-shadow-color);
+}
+
+.theme-switch:focus~#page .switch-label::after, .switch-label:hover::after {
+  opacity: 1;
+}

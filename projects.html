@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aitto-oja::home</title>
+
+    <!-- Icon library -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Dropdown styles -->
+    <link rel="stylesheet" href="dropdown.css" />
+
+    <!-- Dark/Light theme css stylesheet -->
+    <link rel="stylesheet" href="dark_light_theme.css" />
+
+    <!-- Page style sheet -->
+    <link rel="stylesheet" href="mystyle.css" />
+
+    <!-- Guessing game style sheet -->
+    <link rel="stylesheet" href="guessing_game.css" />
+
+</head>
+
+<body>
+    <input type="checkbox" class="theme-switch" id="theme-switch" />
+    <div id="page">
+        <div id="content">
+            <header>
+                <label for="theme-switch" class="switch-label"></label>
+            </header>
+            <main>
+
+                <aside>
+                    <div class="dropdown" style="float:left;">
+                        <button onmouseover="myFunction()" class="dropbtn"><i class="fa fa-bars"></i></button>
+                        <div class="dropdown-content" style="left:0;">
+                            <a href="index.html"><i class="fa fa-home"> Home</i></a>
+                            <a href="projects.html"><i class="fa fa-file-code-o"> Projects </i></a>
+                            <a href="contact.html"><i class="fa fa-envelope-o"> Contact </i></a>
+                        </div>
+                    </div>
+
+                </aside>
+                <h1>Introduction</h1>
+
+                <p>
+                    I know I have not invented an airplane or a new programming language.
+                    But here are my little projects that I have been working with for last
+                    few days. It is not much but hay, there is only 24 hours in a day...
+                    Click <i class="fa fa-chevron-down"></i> icon to see more about projects.
+                </p>
+
+                <ul>
+                    <li>
+
+                        <h3>
+                            This webpage
+                            <button onclick="addTextFunction('addWebpageTextBtn', 'startWebpage', 'showWebpage')"
+                                id="addWebpageTextBtn">
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
+                        <span id="startWebpage"> </span> <span id="showWebpage">
+                            <p>
+                                I created the first version of this webpage on 17th September 2020.
+                                To write in English was a choice I made after short consideration.
+                                Finish would have been more easier for me but I decide to write this page
+                                in English to show my English skills.
+                            </p>
+
+                            <p>
+                                First I created home page. I have done webpages befor but I think
+                                <a href="https://w3schools.com">w3schools</a> is very good place to
+                                start if you want to learn programming. That is the website I go if
+                                I have to check someting or learn new things. There is tutorials for
+                                HTML, CSS and JS but also other programming languages like Python,
+                                Java, and C.
+                            </p>
+
+                            <p>
+                                Dropdown menu in upper left corner was created using only html and css.
+                                But in this page I created buttons to show or hide text. This was created
+                                using JavaScript.
+                            </p>
+                        </span>
+
+                    </li>
+
+                    <li>
+
+                        <h3>
+                            Guess my number
+                            <button
+                                onclick="addTextFunction('addGuessNumberTextBtn', 'startGuessNumber', 'showGuessNumber')"
+                                id="addGuessNumberTextBtn">
+                                <i class="fa fa-chevron-down"></i>
+                            </button>
+                        </h3>
+                        <span id="startGuessNumber"> </span> <span id="showGuessNumber">
+                            <p>
+                                This is very simple card game, all you need to do is guess the number (1-14) of the card
+                                below.
+                                You have five guesses.
+                            </p>
+
+                            <p>
+                                <button onclick="var cardName = startCardGame(); document.getElementById('cardHolder').innerHTML=cardName;
+                            var counts=0; 
+                            document.getElementById('counter').innerHTML=counts; " id="startCardGameBtn">Start</button>
+                            </p>
+
+                            <p hidden id="cardHolder"></p>
+
+                            <span id="startGuessing"> </span> <span id="showGuessing">
+
+                                <p>
+                                    <input type="text" id="guessInput" value="" maxlength="2" size="2" value="">
+                                    <button onclick="var counts = makeGuessing(document.getElementById('counter').innerHTML, 
+                                document.getElementById('cardHolder').innerHTML); 
+                                document.getElementById('counter').innerHTML=counts;">Make a guess</button>
+                                </p>
+
+                                <p>
+                                    <img src="Cards/purple_back.jpg" alt="kortin takakansi" width="25%" id="cardImage">
+                                </p>
+
+                                <p>
+                                    Guesses count:
+                                </p>
+                                <p id="counter"> </p>
+                            </span>
+                        </span>
+
+                    </li>
+                </ul>
+
+
+
+
+            </main>
+            <footer>
+                <small>
+                    This page was last modified on:
+                    <script> document.write(document.lastModified) </script>
+                </small>
+            </footer>
+        </div>
+    </div>
+
+    <script src="darktheme.js"></script>
+    <script src="myjsfile.js"></script>
+    <script src="mycardgame.js"></script>
+</body>
+
+</html>
